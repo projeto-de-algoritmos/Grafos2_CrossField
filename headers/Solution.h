@@ -1,10 +1,11 @@
 #pragma once
-#include "Dijkstra.h"
+#include <Dijkstra.h>
 #include <ctime>
 
 class Solution {
 private:
     std::vector<adjList*> graph;
+    solution* sol;
     
     void generateRandomMatrix();
     void generateGraph();
@@ -17,5 +18,6 @@ public:
     int** getGameMatrix();
     int getSolution();
     void newGame();
+    std::vector<int> getPath();
 
 };

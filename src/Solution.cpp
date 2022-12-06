@@ -21,6 +21,8 @@ void Solution::generateRandomMatrix(){
             gameMatrix[i][j] = rand()%30+1;
         }
     }
+
+    gameMatrix[0][0] = 0;
 }
 
 void Solution::generateGraph(){
@@ -35,6 +37,11 @@ void Solution::generateGraph(){
 }
 
 int Solution::getSolution(){
-    return Dijkstra::run(graph, 0, 99);
+   sol = Dijkstra::run(graph, 0, 99);
+   return sol->amount;
+}
+
+std::vector<int> Solution::getPath(){
+    return sol->path;
 }
 

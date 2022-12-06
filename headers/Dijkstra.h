@@ -7,6 +7,12 @@
 typedef struct adjListNode adjListNode;
 typedef struct adjList adjList;
 
+typedef struct solution
+{
+   int amount;
+   std::vector<int> path;
+}solution;
+
 adjListNode* newAdjListNode(int x, int y, int weight);
 adjList* newAdjList(int x, int y);
 void setAdjs(int m[10][10], adjList* l);
@@ -25,5 +31,5 @@ public:
     Dijkstra(/* args */);
     ~Dijkstra();
 
-    static int run(std::vector<adjList*> graph, int src, int dest);
+    static solution* run(std::vector<adjList*> graph, int src, int dest);
 };

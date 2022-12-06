@@ -1,4 +1,4 @@
-#include "../headers/Dijkstra.h"
+#include <Dijkstra.h>
 
 typedef struct adjListNode
 {
@@ -63,7 +63,7 @@ void setAdjs(int m[10][10], adjList* l){
     }
 }
 
-int Dijkstra::run(std::vector<adjList*> graph, int src, int dest){
+solution* Dijkstra::run(std::vector<adjList*> graph, int src, int dest){
     std::map<int, std::pair<int, int>> weightSet;
     
     std::priority_queue<std::vector<int>, 
@@ -84,7 +84,19 @@ int Dijkstra::run(std::vector<adjList*> graph, int src, int dest){
         }
         minHeap.pop();
     }
-return weightSet[dest].first;
+
+    solution *sol = (solution*) std::malloc(sizeof(solution));
+
+    sol->path.push_back(dest);
+    int t = weightSet[dest].second;
+    while (t)
+    {
+        sol->path.push_back(t);
+        t=weightSet[t].second;
+    }
+    sol->path.push_back(t);
+    sol->amount = weightSet[dest].first;
+return sol;
 }
 
 void Dijkstra::setPq(std::priority_queue<std::vector<int>, 
