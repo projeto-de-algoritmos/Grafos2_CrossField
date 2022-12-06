@@ -1,41 +1,43 @@
-**!! Atenção: Renomeie o seu repositório para (Tema)_(NomeDoProjeto). !!** 
+# CrossField
 
-Temas:
- - Grafos1
- - Grafos2
- - PD
- - D&C
- - Greed
- - Final 
- 
- **!! *Não coloque os nomes dos alunos no título do repositório*. Exemplo de título correto: Grafos2_Labirinto-do-Minotauro !!**
- 
- (Apague essa seção)
-
-# NomedoProjeto
-
-**Número da Lista**: X<br>
-**Conteúdo da Disciplina**: XXXXXXXXXX<br>
+**Número da Lista**: 17<br>
+**Conteúdo da Disciplina**: Grafos 02<br>
 
 ## Alunos
 |Matrícula | Aluno |
 | -- | -- |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| 18/0149687 |  Daniel Porto de Souza |
 
 ## Sobre 
-Descreva os objetivos do seu projeto e como ele funciona. 
+ CrossField é um mini game matemático. O objetivo é, dada uma matriz 10x10, percorrer o caminho de celulas cujo o somatório dos valores em seu conteúdo seja o mínimo possível. O game se inicia na Célula 1X1 e termina ao chegar na 10x10.
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
-
+![Tela inicial](assets/screenshots/cf01.png)
+![Tela de desistância](assets/screenshots/cf02.png)
+![Tela de Vitória](assets/screenshots/cf03.png)
 ## Instalação 
-**Linguagem**: xxxxxx<br>
-**Framework**: (caso exista)<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
+**Linguagem**: C++<br>
+
+### Requisitos
+ - make;
+ - g++;
+ - git;
 
 ## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
+Para a utilização, basta clonar o repositório com:
+> $ git clone https://github.com/projeto-de-algoritmos/Grafos2_CrossField.git
 
-## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
+Feito a clone, dentro do diretório do repositório, basta compilar o projeto com o comando:
+
+> $ make
+
+Para iniciar o Game:
+
+> $ make run
+## Controles
+- Setas direcionais para movimentar na matrix;
+- Tecla g para desistir e ver o caminho vencedor;
+- Tecla enter para reiniciar no meio da partida
+
+### Observação
+Para trocar a matriz é preciso reiniciar o game, a cada inicialização é gerada uma matriz diferente.
