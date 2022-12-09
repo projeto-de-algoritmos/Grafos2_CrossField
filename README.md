@@ -1,6 +1,6 @@
 # CrossField
 
-**Número da Lista**: 17<br>
+**Número da Lista**: 32<br>
 **Conteúdo da Disciplina**: Grafos 02<br>
 
 ## Alunos
